@@ -13,7 +13,10 @@
 
         session_start();
 
-        var_dump($_SESSION);
+        if (isset($_SESSION['name']))
+            echo 'Hello '.$_SESSION['name'];
+        else
+            echo 'Not logged in.';
 
     ?>
     <a href="page3.php">page 3</a>
