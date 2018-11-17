@@ -9,22 +9,17 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <p>Welcome to Cookie test.</p>
+
     <?php
-
-// Session example. //
-
-session_start();
-
-echo 'Welcome to page #1';
-
-$_SESSION['favcolor']   = 'green';
-$_SESSION['animal']     = 'cat';
-$_SESSION['time']       = time();
-$_SESSION['name']       = 'Steve';
-
-echo '<br> /><a href="page2.php">page 2 </a>';
+        $value = 'content of test cookie';
+        //setcookie( "TestCookie", $value );
+        //setcookie( "TestCookie", $value, time()+3600); //expire in 1 hour
+        setcookie( "TestCookie", $value, time()+3600, "/post_test/", "example.com" );
 
     ?>
+<br><a href="page2.php">page 2 </a>;
+
     
 </body>
 </html>

@@ -11,13 +11,8 @@
 <body>
     <?php
 
-        session_start();
-
-        if (isset($_SESSION['name']))
-            echo 'Hello '.$_SESSION['name'];
-        else
-            echo 'Not logged in.';
-
+        var_dump($_COOKIE);
+        
     ?>
     <a href="page3.php">page 3</a>
 </body>
